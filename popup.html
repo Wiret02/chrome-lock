@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    input {
+      padding: 5px;
+      margin: 10px 0;
+      width: 200px;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 5px 0;
+    }
+    .section {
+      margin: 20px 0;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    p {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Введення пароля -->
+  <h3>Enter Password</h3>
+  <input type="password" id="password" placeholder="Password" />
+  <button id="submit">Unlock</button>
+  <p id="error">Incorrect password!</p>
+
+  <!-- Розділ зміни пароля -->
+  <div class="section">
+    <h3>Change Password</h3>
+    <input type="password" id="old-password" placeholder="Old Password" />
+    <input type="password" id="new-password" placeholder="New Password" />
+    <input type="password" id="confirm-password" placeholder="Confirm Password" />
+    <button id="change-password">Change Password</button>
+    <p id="change-error">Error: Passwords don't match!</p>
+    <p id="change-success" style="color: green; display: none;">Password changed successfully!</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
